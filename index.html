@@ -4,13 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imperion Data Systems | Advanced AI & Automation Partners</title>
-    <!-- Tailwind CSS CDN for styling -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style>
-        /* Base typography and configuration overrides */
-        body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            background-color: #F8FAFC; /* Slate-50 background */
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        slate: { 50: '#F8FAFC', 800: '#1E293B' },
+                        navy: { 900: '#0F172A' },
+                        electric: { 600: '#2563EB' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-sans bg-slate-50 text-slate-800;
+            }
         }
         .view-section {
             display: none;
