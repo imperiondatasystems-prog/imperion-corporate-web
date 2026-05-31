@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Imperion Data Systems — Book a Free AI Architecture Audit</title>
+  <meta name="description" content="Book a free AI architecture audit with Imperion. Tell us your biggest operational bottleneck and get a technical review within 24 hours.">
+  <meta property="og:title" content="Contact Imperion Data Systems — Free AI Architecture Audit">
+  <link rel="canonical" href="https://imperiondata.com/contact">
+  <script>if(localStorage.getItem('imperion-theme')==='dark')document.documentElement.classList.add('dark-mode');</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=[ REPLACE THIS WITH YOUR G- ID ]"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','[ REPLACE THIS WITH YOUR G- ID ]');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .contact-info-panel {
+      background: var(--navy);
+      border-radius: var(--radius-xl);
+      padding: 36px;
+      position: sticky;
+      top: 84px;
+      overflow: hidden;
+    }
+    .contact-info-panel::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 280px; height: 280px;
+      background: radial-gradient(circle, rgba(59,130,246,0.25), transparent 70%);
+      pointer-events: none;
+    }
+    .cip-label { font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:3px; }
+    .cip-value { font-size:14px;font-weight:600;color:rgba(255,255,255,0.85); }
+    .cip-value a { color:rgba(255,255,255,0.85);transition:color 0.18s; }
+    .cip-value a:hover { color:#fff; }
+    .contact-info-item { padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;gap:12px;align-items:flex-start; }
+    .contact-info-item:last-child { border-bottom:none; }
+    .cip-icon { width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0; }
+    .cip-icon svg { width:16px;height:16px;color:rgba(255,255,255,0.7); }
+
+    .contact-form-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      box-shadow: var(--shadow-sm);
+    }
+    .form-row-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .form-g-full { margin-bottom: 16px; }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .dark-action-btn {
+      display: flex; align-items: center; gap: 10px;
+      padding: 11px 14px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-sm);
+      transition: background 0.18s, border-color 0.18s;
+      width: 100%; text-align: left;
+      color: rgba(255,255,255,0.8);
+      cursor: pointer; font-size: 13px; font-weight: 600;
+      text-decoration: none; font-family: inherit;
+    }
+    .dark-action-btn:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.2); color: #fff; }
+    .dab-icon { width: 30px;height:30px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0; }
+
+    @media (max-width: 900px) {
+      .contact-wrapper { grid-template-columns: 1fr; }
+      .contact-info-panel { position: static; }
+    }
+    @media (max-width: 600px) {
+      .form-row-2col { grid-template-columns: 1fr; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .contact-info-panel, .contact-form-panel { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-container">
+    <a href="/" class="nav-logo"><div class="nav-logo-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><span class="nav-logo-text">IMPERION<span>.</span></span></a>
+    <div class="nav-links">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/services.html" class="nav-link">Services</a>
+      <a href="/revenue-os.html" class="nav-link">Revenue OS</a>
+      <a href="/company.html" class="nav-link">Company</a>
+      <a href="/contact.html" class="nav-link active">Contact</a>
+    </div>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+      <svg class="icon-moon" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+      <svg class="icon-sun" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="4"/><path stroke-linecap="round" d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+    </button>
+    <a href="/contact.html" class="nav-cta">Book AI Audit</a>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/">Home</a><a href="/services.html">Services</a><a href="/revenue-os.html">Revenue OS</a><a href="/company.html">Company</a><a href="/contact.html">Contact</a>
+  <a href="/contact.html" class="mobile-cta">Book Free AI Audit →</a>
+</div>
+
+<main class="page-content">
+
+  <!-- Hero -->
+  <section style="position:relative;overflow:hidden;padding:72px 0 56px;text-align:center;border-bottom:1px solid var(--border);">
+    <div class="hero-grid-bg"></div>
+    <div class="container" style="position:relative;z-index:2;">
+      <span class="eyebrow reveal">Get in Touch</span>
+      <h1 class="section-title reveal delay-1" style="margin:12px auto 14px;max-width:660px;">Let's Architect Your<br>Next Phase of Growth.</h1>
+      <p class="section-subtitle reveal delay-2" style="max-width:520px;margin:0 auto;">We guarantee a technical review and meaningful response within 24 hours. No auto-responders. A real engineer reads every submission.</p>
+    </div>
+  </section>
+
+  <!-- Contact Split -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-wrapper">
+
+        <!-- Info Panel -->
+        <div class="contact-info-panel reveal-left" style="position:relative;">
+          <div style="position:relative;z-index:1;">
+            <h2 style="font-size:clamp(20px,2.8vw,26px);font-weight:900;letter-spacing:-0.03em;color:#fff;line-height:1.2;margin-bottom:10px;">Ready to Stop Leaving Revenue on the Table?</h2>
+            <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:24px;">Tell us your biggest operational bottleneck. We'll come back with a concrete technical plan—not a sales pitch.</p>
+
+            <!-- Pledge -->
+            <div style="padding:14px 16px;background:rgba(59,130,246,0.15);border:1px solid rgba(59,130,246,0.3);border-radius:var(--radius-sm);margin-bottom:24px;display:flex;gap:10px;align-items:flex-start;">
+              <span style="font-size:18px;flex-shrink:0;">⚡</span>
+              <div>
+                <div style="font-size:12px;font-weight:700;color:#93c5fd;margin-bottom:3px;">The 24-Hour Pledge</div>
+                <p style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.6;">A real engineer reviews your submission and responds within 24 hours—every time.</p>
+              </div>
+            </div>
+
+            <!-- Contact items -->
+            <div style="margin-bottom:20px;">
+              <div class="contact-info-item">
+                <div class="cip-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+                <div><div class="cip-label">Email</div><div class="cip-value"><a href="mailto:hello@imperiondata.com">hello@imperiondata.com</a></div></div>
+              </div>
+              <div class="contact-info-item">
+                <div class="cip-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+                <div><div class="cip-label">Headquarters</div><div class="cip-value">Pune, Maharashtra, India</div></div>
+              </div>
+              <div class="contact-info-item">
+                <div class="cip-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+                <div><div class="cip-label">Response Time</div><div class="cip-value">Within 24 hours — guaranteed</div></div>
+              </div>
+            </div>
+
+            <!-- Action buttons -->
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <a href="https://wa.me/919910261283" target="_blank" rel="noopener" class="dark-action-btn" id="contact-whatsapp-btn">
+                <div class="dab-icon" style="background:rgba(34,197,94,0.15);">
+                  <svg width="15" height="15" fill="#22c55e" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </div>
+                Chat on WhatsApp
+              </a>
+              <a href="https://www.linkedin.com/company/imperion-data-systems/" target="_blank" rel="noopener" class="dark-action-btn" id="contact-linkedin-btn">
+                <div class="dab-icon" style="background:rgba(59,130,246,0.15);">
+                  <svg width="15" height="15" fill="#60a5fa" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </div>
+                Follow on LinkedIn
+              </a>
+              <a href="[ REPLACE THIS WITH YOUR CALENDLY LINK ]" target="_blank" rel="noopener" class="dark-action-btn" id="contact-calendly-btn">
+                <div class="dab-icon" style="background:rgba(37,99,235,0.2);">
+                  <svg width="15" height="15" fill="none" stroke="#93c5fd" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                </div>
+                Book via Calendly
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Panel -->
+        <div class="contact-form-panel reveal-right">
+          <h2 style="font-size:clamp(20px,3vw,26px);font-weight:900;letter-spacing:-0.03em;color:var(--text-primary);margin-bottom:6px;">Request a Free Technical Audit</h2>
+          <p style="font-size:13px;color:var(--text-muted);margin-bottom:28px;">The more context you give us, the more specific and valuable our response will be.</p>
+
+          <!-- Success State -->
+          <div id="form-success" class="form-success">
+            <div class="form-success-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+            <h3>Request Received!</h3>
+            <p>Our engineering team will review your details and contact you with a technical assessment within 24 hours.</p>
+            <button onclick="resetContactForm()" style="margin-top:16px;padding:9px 22px;background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.2);border-radius:7px;color:var(--accent);font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;">Submit Another Inquiry</button>
+          </div>
+
+          <!-- Form -->
+          <form id="contact-form" novalidate>
+            <div class="form-row-2col form-g-full">
+              <div class="form-group">
+                <label class="form-label" for="f-name">Full Name *</label>
+                <input type="text" id="f-name" class="form-input" placeholder="Rahul Sharma" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="f-company">Company *</label>
+                <input type="text" id="f-company" class="form-input" placeholder="Acme Realty Pvt Ltd" required autocomplete="organization">
+              </div>
+            </div>
+            <div class="form-group form-g-full">
+              <label class="form-label" for="f-email">Work Email *</label>
+              <input type="email" id="f-email" class="form-input" placeholder="rahul@acmerealty.com" required autocomplete="email">
+            </div>
+            <div class="form-group form-g-full">
+              <label class="form-label" for="f-interest">Primary Interest *</label>
+              <select id="f-interest" class="form-select" required>
+                <option value="" disabled selected>Select what you need...</option>
+                <option value="Revenue OS (Real Estate)">Revenue OS — Real Estate Lead Automation</option>
+                <option value="AI Agents">Autonomous AI Agents</option>
+                <option value="Private RAG Systems">Private RAG / Knowledge Base</option>
+                <option value="CRM / Workflow Automation">CRM &amp; Workflow Automation</option>
+                <option value="WhatsApp AI">WhatsApp AI Qualification</option>
+                <option value="Custom Integrations">Custom System Integrations</option>
+                <option value="General Inquiry">Not Sure — Let's Talk</option>
+              </select>
+            </div>
+            <div class="form-group form-g-full" style="margin-bottom:24px;">
+              <label class="form-label" for="f-bottleneck">Your Biggest Operational Bottleneck</label>
+              <textarea id="f-bottleneck" class="form-textarea" rows="4" placeholder="e.g. 'We get 200+ property leads a month but our team can only follow up with 40% of them. We're losing deals to slow response times...'"></textarea>
+              <div style="margin-top:5px;font-size:11px;color:var(--text-subtle);">Specific details = more valuable response. Be as candid as you like.</div>
+            </div>
+            <button type="submit" id="form-submit-btn" class="form-submit">Request Free AI Audit →</button>
+            <p style="margin-top:14px;font-size:11px;color:var(--text-subtle);text-align:center;">🔒 Your information is never shared or sold. See our <a href="#" onclick="openModal('modal-privacy');return false;" style="color:var(--text-muted);text-decoration:underline;">Privacy Policy</a>.</p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-sm section-alt section-border-top section-border-bottom">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:36px;">
+        <div class="eyebrow reveal">Quick Answers</div>
+        <h2 class="reveal delay-1" style="font-size:clamp(22px,3vw,28px);font-weight:900;letter-spacing:-0.03em;color:var(--text-primary);margin-top:10px;">Before You Reach Out</h2>
+      </div>
+      <div class="faq-grid reveal delay-2">
+        <div class="card" style="padding:22px;">
+          <div style="font-size:14px;font-weight:800;color:var(--text-primary);margin-bottom:7px;">Do you work outside India?</div>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.6;">Yes. We have full remote delivery capability and serve clients globally. All communication is in English with flexible time zone coordination.</p>
+        </div>
+        <div class="card" style="padding:22px;">
+          <div style="font-size:14px;font-weight:800;color:var(--text-primary);margin-bottom:7px;">Is the AI Audit really free?</div>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.6;">Yes. We offer a complimentary architecture review because we only engage on projects where we can deliver measurable value. If we can't help, we'll tell you directly.</p>
+        </div>
+        <div class="card" style="padding:22px;">
+          <div style="font-size:14px;font-weight:800;color:var(--text-primary);margin-bottom:7px;">Do you sign NDAs before discussions?</div>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.6;">Absolutely. An NDA is standard practice before any proprietary information is shared in scoping conversations. Your IP is always protected.</p>
+        </div>
+        <div class="card" style="padding:22px;">
+          <div style="font-size:14px;font-weight:800;color:var(--text-primary);margin-bottom:7px;">How long does deployment take?</div>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.6;">Revenue OS onboarding is 15 minutes from your side. Custom AI systems are scoped during the audit, giving you a precise timeline upfront before any commitment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div style="display:flex;align-items:center;gap:9px;margin-bottom:4px;"><div class="nav-logo-icon" style="background:rgba(255,255,255,0.15);"><svg fill="none" stroke="#fff" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><span class="footer-logo-text">IMPERION<span>.</span></span></div><p>Elite, engineering-first AI consultancy headquartered in Pune, India.</p><p style="font-size:11px;color:rgba(255,255,255,0.3);margin-top:8px;">CIN: U62099PN2026PTC251010</p></div>
+      <div class="footer-col"><h4>Solutions</h4><ul><li><a href="/services.html#ai-agents">AI Agents &amp; LLMs</a></li><li><a href="/services.html#rag-systems">RAG Systems</a></li><li><a href="/services.html#crm-automation">CRM Automation</a></li><li><a href="/services.html#whatsapp-ai">WhatsApp AI</a></li><li><a href="/revenue-os.html">Revenue OS</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="/company.html">Our Story</a></li><li><a href="/company.html#methodology">Methodology</a></li><li><a href="/company.html#leadership">Leadership</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="mailto:hello@imperiondata.com">hello@imperiondata.com</a></li><li><a href="https://wa.me/919910261283" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="https://www.linkedin.com/company/imperion-data-systems/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="[ REPLACE THIS WITH YOUR CALENDLY LINK ]" target="_blank" rel="noopener">Book a Call</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p class="footer-copy">© 2026 Imperion Data Systems Private Limited. All rights reserved.</p><div class="footer-legal"><a href="#" onclick="openModal('modal-privacy');return false;">Privacy</a><a href="#" onclick="openModal('modal-terms');return false;">Terms</a></div></div>
+  </div>
+</footer>
+
+<div id="modal-privacy" class="legal-modal" onclick="closeModal('modal-privacy')">
+  <div class="legal-modal-box">
+    <span class="legal-close" onclick="closeModal('modal-privacy')">&times;</span>
+    <h2>Privacy Policy</h2>
+    <p>Last updated: June 2026 — Imperion Data Systems Private Limited (CIN: U62099PN2026PTC251010)</p>
+    <h3>Data Collection</h3><p>We collect name, company, email, and project description via our contact form—used solely to respond to your inquiry and scope a potential engagement.</p>
+    <h3>Data Isolation</h3><p>All client data is held in strictly isolated environments. Your data is never shared, co-mingled, or used to train any public AI model under any circumstances.</p>
+    <h3>Security Standards</h3><p>TLS 1.3 in transit. AES-256 at rest. Access strictly limited to authorized engineers involved in your engagement.</p>
+    <h3>Retention &amp; Deletion</h3><p>Inquiry data retained for 90 days. Irreversibly deleted within 7 business days upon written request. We never sell or rent any data.</p>
+    <h3>Contact</h3><p><a href="mailto:hello@imperiondata.com" style="color:var(--accent);">hello@imperiondata.com</a></p>
+  </div>
+</div>
+<div id="modal-terms" class="legal-modal" onclick="closeModal('modal-terms')">
+  <div class="legal-modal-box">
+    <span class="legal-close" onclick="closeModal('modal-terms')">&times;</span>
+    <h2>Terms of Service</h2>
+    <p>Last updated: June 2026 — Imperion Data Systems Private Limited</p>
+    <h3>Engagements</h3><p>All work governed by a formally executed Statement of Work. Website inquiries do not create a binding contract.</p>
+    <h3>IP Ownership</h3><p>Upon full payment, clients retain 100% ownership of all custom-built systems and code. Imperion retains no license to resell client-specific IP.</p>
+    <h3>Confidentiality</h3><p>Imperion engineers operate under signed NDAs as standard practice before any proprietary information is shared.</p>
+    <h3>Governing Law</h3><p>Governed by Indian law, jurisdiction in Pune, Maharashtra.</p>
+  </div>
+</div>
+
+<script src="/js/nav.js" defer></script>
+<script src="/js/animations.js" defer></script>
+<script src="/js/form.js" defer></script>
+</body>
+</html>
