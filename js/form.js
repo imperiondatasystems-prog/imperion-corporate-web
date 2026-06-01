@@ -6,6 +6,8 @@
   if (!form) return;
 
   const successEl = document.getElementById('form-success');
+  const errorEl   = document.getElementById('form-error');
+  const errorMsgEl= document.getElementById('form-error-msg');
   const submitBtn = form.querySelector('#form-submit-btn');
 
   form.addEventListener('submit', async (e) => {
@@ -42,7 +44,13 @@
         throw new Error(data.error || 'Submission failed.');
       }
     } catch (err) {
-      alert('Error: ' + err.message);
+      // Show inline error — no jarring alert()
+      const msg = err.message || 'Something went wrong. Please try again.';
+      if (errorEl && errorMsgEl) {
+        errorMsgEl.textContent = msg;
+        errorEl.classList.add('show');
+        setTimeout(() => errorEl.classList.remove('show'), 6000);
+      }
     } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = originalText;
@@ -55,6 +63,7 @@
     form.style.opacity = '1';
     form.style.display = '';
     if (successEl) successEl.classList.remove('show');
+    if (errorEl)   errorEl.classList.remove('show');
   };
 
   // Legal modals
