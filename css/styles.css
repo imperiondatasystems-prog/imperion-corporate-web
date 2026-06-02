@@ -131,15 +131,14 @@ html.dark-mode .site-nav {
   margin-right: auto;
 }
 .brand-logo-img, .footer-logo-img {
-  transition: filter 0.3s ease;
+  transition: opacity 0.3s ease;
 }
-/* Footer logo is always on dark background, so always gets the glow */
-.footer-logo-img {
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
+
+html.dark-mode .light-logo {
+  display: none !important;
 }
-/* Header logo gets the glow only in dark mode */
-html.dark-mode .brand-logo-img {
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
+html.dark-mode .dark-logo {
+  display: block !important;
 }
 
 .nav-logo-text {
