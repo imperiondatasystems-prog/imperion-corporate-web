@@ -130,14 +130,18 @@ html.dark-mode .site-nav {
   flex-shrink: 0;
   margin-right: auto;
 }
-.nav-logo-icon {
-  width: 32px; height: 32px;
-  background: var(--accent);
-  border-radius: 7px;
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
+.brand-logo-img, .footer-logo-img {
+  transition: filter 0.3s ease;
 }
-.nav-logo-icon svg { width: 16px; height: 16px; color: #fff; }
+/* Footer logo is always on dark background, so always gets the glow */
+.footer-logo-img {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
+}
+/* Header logo gets the glow only in dark mode */
+html.dark-mode .brand-logo-img {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
+}
+
 .nav-logo-text {
   font-size: 18px;
   font-weight: 900;
