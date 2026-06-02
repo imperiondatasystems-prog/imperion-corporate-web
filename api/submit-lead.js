@@ -4,11 +4,32 @@ export default async function handler(req, res) {
     }
 
     try {
-        const { name, company, email, phone, service, message } = req.body;
+        const { name, company, email, phone, service, message, botField } = req.body;
+
+        // 1. Bot/Spam Protection (Honeypot)
+        if (botField) {
+            console.log('Bot detected via honeypot. Dropping request.');
+            return res.status(200).json({ success: true, message: 'Lead captured successfully.' });
+        }
 
         if (!name || !email || !service) {
             return res.status(400).json({ success: false, error: 'Missing required fields.' });
         }
+
+        // 2. Input Sanitization (XSS Prevention)
+        const sanitize = (str) => {
+            if (!str) return '';
+            return String(str).replace(/[&<>"']/g, (m) => ({
+                '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+            })[m]);
+        };
+
+        const safeName = sanitize(name);
+        const safeCompany = sanitize(company);
+        const safeEmail = sanitize(email);
+        const safePhone = sanitize(phone);
+        const safeService = sanitize(service);
+        const safeMessage = sanitize(message);
 
         // Auto-fix trailing slashes in the URL environment variable
         const cleanSupabaseUrl = process.env.SUPABASE_URL.replace(/\/$/, '');
@@ -22,13 +43,14 @@ export default async function handler(req, res) {
                 'Content-Type': 'application/json',
                 'Prefer': 'return=minimal'
             },
-            body: JSON.stringify({ name, email, phone, company, service, message })
+            body: JSON.stringify({ name: safeName, email: safeEmail, phone: safePhone, company: safeCompany, service: safeService, message: safeMessage })
         });
 
         if (!supabaseResponse.ok) {
             const errLog = await supabaseResponse.text();
             console.error('Supabase Error:', errLog);
-            return res.status(500).json({ success: false, error: `Database rejected the data: ${supabaseResponse.statusText}` });
+            // 3. Prevent Data Leakage: Return generic error
+            return res.status(500).json({ success: false, error: 'Internal server error processing your request. Please try again later.' });
         }
 
         // 2. Send Email via Resend
@@ -42,14 +64,14 @@ export default async function handler(req, res) {
                 body: JSON.stringify({
                     from: 'Imperion Web Engine <onboarding@resend.dev>',
                     to: [process.env.NOTIFICATION_EMAIL],
-                    subject: `🔥 New Lead: ${company || name} - ${service}`,
+                    subject: `🔥 New Lead: ${safeCompany || safeName} - ${safeService}`,
                     html: `
                         <h3>New Lead Generated</h3>
-                        <p><strong>Name:</strong> ${name}</p>
-                        <p><strong>Email:</strong> ${email}</p>
-                        <p><strong>Company:</strong> ${company || 'N/A'}</p>
-                        <p><strong>Service:</strong> ${service}</p>
-                        <p><strong>Message:</strong> ${message || 'N/A'}</p>
+                        <p><strong>Name:</strong> ${safeName}</p>
+                        <p><strong>Email:</strong> ${safeEmail}</p>
+                        <p><strong>Company:</strong> ${safeCompany || 'N/A'}</p>
+                        <p><strong>Service:</strong> ${safeService}</p>
+                        <p><strong>Message:</strong> ${safeMessage || 'N/A'}</p>
                     `
                 })
             });
@@ -65,6 +87,6 @@ export default async function handler(req, res) {
 
     } catch (globalError) {
         console.error('Execution Fault:', globalError.message);
-        return res.status(500).json({ success: false, error: `Server pipeline crashed: ${globalError.message}` });
+        return res.status(500).json({ success: false, error: 'An unexpected error occurred. Please try again later.' });
     }
 }

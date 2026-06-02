@@ -23,7 +23,8 @@
       email:   document.getElementById('f-email')?.value || '',
       phone:   '',
       service: document.getElementById('f-interest')?.value || '',
-      message: document.getElementById('f-bottleneck')?.value || ''
+      message: document.getElementById('f-bottleneck')?.value || '',
+      botField: document.getElementById('f-botField')?.value || ''
     };
 
     try {
