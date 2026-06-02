@@ -40,9 +40,7 @@ export default async function handler(req, res) {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    // 'from' uses onboarding@resend.dev until imperiondatasystem.com DNS propagation completes.
-                    // Once Resend domain is verified, change to: 'Imperion <noreply@imperiondatasystem.com>'
-                    from: 'Imperion Data Systems <onboarding@resend.dev>',
+                    from: 'Imperion Web Engine <onboarding@resend.dev>',
                     to: [process.env.NOTIFICATION_EMAIL],
                     subject: `🔥 New Lead: ${company || name} - ${service}`,
                     html: `
